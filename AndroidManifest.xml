@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+                package="com.example.gralloctest" android:versionCode="1" android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="gralloc-bug">
+        <activity android:name="com.example.gralloctest.MainActivity" android:label="gralloc bug">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <service android:name="com.example.gralloctest.TestService1" android:exported="false" android:process=":a1">
+            <intent-filter>
+                <action android:name="com.example.gralloctest.TestService1"/>
+            </intent-filter>
+        </service>
+        
+        <service android:name="com.example.gralloctest.TestService2" android:exported="false" android:process=":a2">
+            <intent-filter>
+                <action android:name="com.example.gralloctest.TestService2"/>
+            </intent-filter>
+        </service>
+        
+        <service android:name="com.example.gralloctest.TestService3" android:exported="false" android:process=":a3">
+            <intent-filter>
+                <action android:name="com.example.gralloctest.TestService3"/>
+            </intent-filter>
+        </service>
+
+        <service android:name="com.example.gralloctest.TestService4" android:exported="false" android:process=":a4">
+            <intent-filter>
+                <action android:name="com.example.gralloctest.TestService4"/>
+            </intent-filter>
+        </service>
+
+        <service android:name="com.example.gralloctest.TestService5" android:exported="false" android:process=":a5">
+            <intent-filter>
+                <action android:name="com.example.gralloctest.TestService5"/>
+            </intent-filter>
+        </service>
+
+        <service android:name="com.example.gralloctest.TestService6" android:exported="false" android:process=":a6">
+            <intent-filter>
+                <action android:name="com.example.gralloctest.TestService6"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
